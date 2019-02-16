@@ -42,7 +42,7 @@
 									{{$val->blogPostDate}}
 								  </td>
 								  <td>
-									{{$val->blogImgName}}
+									<img src="{{IMGPATH}}user/{{$val->blogImgName}}" width="150px" />
 								  </td>
 								  <td>
 								   {!! Helper::getName($val->blogPostBy) !!}
