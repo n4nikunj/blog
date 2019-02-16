@@ -47,7 +47,15 @@
 								  <td>
 								   {!! Helper::getName($val->blogPostBy) !!}
 								  </td>
-								  <td><a href="{{BACKENDURL}}blog/edit/{{$val->id}}"><i class="fa fa-edit" style="color:#fff"></i></a> | <a href="{{BACKENDURL}}blog/delete/{{$val->id}}"><i class="fa fa-trash-o" style="color:#fff"></i></a></td>
+								  <td>
+								  @if(Session::get('userDetail')['userType'] != "1")
+									
+									@if (Session::get('userDetail')['userType'] == $val->blogPostBy)
+										<a href="{{BACKENDURL}}blog/edit/{{$val->id}}"><i class="fa fa-edit" style="color:#fff"></i></a> | <a href="{{BACKENDURL}}blog/delete/{{$val->id}}"><i class="fa fa-trash-o" style="color:#fff"></i></a></td>
+									@endif
+								@else
+									<a href="{{BACKENDURL}}blog/edit/{{$val->id}}"><i class="fa fa-edit" style="color:#fff"></i></a> | <a href="{{BACKENDURL}}blog/delete/{{$val->id}}"><i class="fa fa-trash-o" style="color:#fff"></i></a></td>
+								@endif
 								</tr>
 						@php $i++; @endphp		
 						@endforeach

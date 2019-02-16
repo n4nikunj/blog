@@ -54,11 +54,8 @@ class BackEndController extends Controller
             $menu = $this->common->getMenu();
             $this->data['menu']= $menu;
             $role = (string)Session::get('userDetail')['userType'];
-            $where = array();
-            if ($role != "1") {
-                $where=array("blogPostBy"=>$role);
-            }
-            $result = $this->common->getData('blog',$where);
+           
+            $result = $this->common->getData('blog');
             //print_r($result);exit;
             $this->data['blogList']= $result;
             return view('backend.blogList')->with($this->data);
