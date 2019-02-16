@@ -16,7 +16,7 @@ class CommonController extends Controller
         $count =  DB::table('users')->where('email', $postData['login'])->where('password', md5($postData['password']))->count();
         if ($count == 1) {
 		    $result =  DB::table('users')->where('email', $postData['login'])->where('password', md5($postData['password']))->get();
-			$sessionArr=array("userType"=>$result[0]->roleId,"name"=>$result[0]->name,"email"=>$result[0]->email);
+			$sessionArr=array("userType"=>$result[0]->roleId,"name"=>$result[0]->name,"email"=>$result[0]->email,'id'=>$result[0]->id);
 			session(['userDetail' => $sessionArr]);
 			
 		    return true;

@@ -17,7 +17,7 @@
 			<p class="card-description">
                    Post Date
                     <code>{{$blogDetail[0]->blogPostDate}}</code> |  Post By
-                    <code>{{$blogDetail[0]->blogPostBy}}</code>
+                    <code> {!! Helper::getName($blogDetail[0]->blogPostBy) !!}</code>
                   </p>
 		</div>
 		<div class="row">

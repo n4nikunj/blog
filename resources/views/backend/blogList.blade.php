@@ -45,7 +45,7 @@
 									{{$val->blogImgName}}
 								  </td>
 								  <td>
-									{{$val->blogPostBy}}
+								   {!! Helper::getName($val->blogPostBy) !!}
 								  </td>
 								  <td><a href="{{BACKENDURL}}blog/edit/{{$val->id}}"><i class="fa fa-edit" style="color:#fff"></i></a> | <a href="{{BACKENDURL}}blog/delete/{{$val->id}}"><i class="fa fa-trash-o" style="color:#fff"></i></a></td>
 								</tr>

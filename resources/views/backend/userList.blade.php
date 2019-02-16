@@ -7,7 +7,7 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">User List</h4>
-                  <h4 class="card-title"><a href ="">Add New User</a></h4>
+                  <h4 class="card-title"><a href ="{{BACKENDURL}}user/add">Add New User</a></h4>
                   
                   <div class="table-responsive">
                     <table class="table table-dark">
@@ -22,9 +22,7 @@
                           <th>
                             Email
                           </th>
-						  <th>
-                            Status
-                          </th>
+						
                         </tr>
                       </thead>
                       <tbody>
@@ -41,9 +39,7 @@
 								  <td>
 									{{$val->email}}
 								  </td>
-								  <td>
-									{{$val->name}}
-								  </td>
+								 
 								</tr>
 						@php $i++; @endphp		
 						@endforeach
