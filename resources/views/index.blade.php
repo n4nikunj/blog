@@ -9,7 +9,7 @@
 			<div class="col-lg-9 col-9"><a href="{{URL}}/viewblog/{{ str_slug($val->blogTitle) }}/{{$val->id}}" >{{$val->blogTitle}}</a>
 			</div>
 			
-		</div>
+		</div> <BR><BR>
 	@endforeach	
     </div>
 @stop

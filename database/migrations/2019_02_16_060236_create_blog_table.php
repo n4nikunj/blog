@@ -18,7 +18,7 @@ class CreateBlogTable extends Migration
 			$table->string('blogName');
             $table->string('blogTitle');
             $table->date('blogPostDate');
-            $table->string('blogDecription');
+            $table->longText('blogDecription');
             $table->string('blogImgName');
             $table->integer('blogPostBy');
             $table->timestamps();

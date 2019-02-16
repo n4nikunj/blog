@@ -11,7 +11,7 @@
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
           <li class="nav-item">
-            <a href="#" class="nav-link">Home
+            <a href="{{URL}}" class="nav-link">Home
             </a>
           </li>
         </ul>
